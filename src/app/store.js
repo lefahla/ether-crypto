@@ -1,5 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import { crpytoApi } from '../services/cryptoApi';
+
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        [ crpytoApi.reducerPath ] : crpytoApi.reducer
+    },
 });
